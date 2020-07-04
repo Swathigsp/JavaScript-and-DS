@@ -1,0 +1,32 @@
+function smallestCommons(arr) {
+  let arr2=arr.sort(function(a,b){return a-b})
+  console.log(arr2);
+  let count=arr2[1]*arr2[0];
+let arr3=[];
+for(let n=arr2[0];n<=arr2[1];n++){
+arr3.push(n);
+}
+console.log(arr3);
+function temp(a)
+{  let num=0;
+  for(let i=0;i<arr3.length;i++){
+  if(a%arr3[i]===0)
+  {num++;}
+}
+   return num;
+}
+
+for(let loop=1;loop>0;loop++){
+  if (temp(count)!=arr3.length){
+    count=arr2[1]*arr2[0]*loop;  
+    }
+  else{console.log(count);
+    return count;
+  }
+
+}    console.log(count)
+
+}
+
+
+smallestCommons([1,13]);

@@ -1,0 +1,15 @@
+function palindrome(str) {
+let str1=str.toLowerCase().replace(/\W+|_+|\s+/g,"");
+let revstr=str.toLowerCase().replace(/\W+|_+|\s+/g,"").split("").reverse().join("");
+console.log(revstr);
+console.log(str.localeCompare(revstr))
+if(str1===revstr){
+  console.log("palindrome");
+  return true;
+}
+else {
+  console.log("not palindrome");
+  return false;
+}}
+
+palindrome("Rcar");

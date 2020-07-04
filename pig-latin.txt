@@ -1,0 +1,11 @@
+function translatePigLatin(str) {
+
+str=str.replace(/^[aeiou]\w*/,str+"way").replace(/(^[^aeiou]+)(\w*)/, "$2$1ay")
+
+console.log(str)
+return str;
+
+
+}
+
+translatePigLatin("consonant");

@@ -1,0 +1,21 @@
+function rot13(str) {
+let str1=[...str];
+console.log(str1);
+
+for(let i=0;i<str1.length;i++){
+  if(/[A-M]/g.test(str[i]))
+{str1[i]=str[i].replace(str[i],
+String.fromCharCode(str.charCodeAt(i)+13));
+}
+else if(/[N-Z]/g.test(str[i]))
+{str1[i]=str1[i].replace(str[i],
+  String.fromCharCode(str.charCodeAt(i)-13));
+console.log(str1[i]);
+}}
+str1=str1.join("");
+
+ console.log(str1)
+  return str1;
+}
+
+rot13("SERR CVMMN?");

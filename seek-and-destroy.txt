@@ -1,0 +1,16 @@
+function destroyer(arr) {
+
+  var args = Array.prototype.slice.call(arguments);
+  console.log(args);
+  let arr1=[...args[0]];
+  console.log(arr1)
+  let diff=arr1.filter(x => !args.includes(x))
+console.log(diff);
+
+  
+  return diff;
+
+
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);

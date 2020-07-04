@@ -1,0 +1,6 @@
+function steamrollArray(arr) {
+  let arr2=[].concat(...arr);
+    return arr2.some(Array.isArray) ? steamrollArray(arr2) : arr2;
+
+  }
+steamrollArray([1, [2], [3, [[4]]]]);

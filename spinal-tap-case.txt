@@ -1,0 +1,13 @@
+function spinalCase(str) {
+  str=str.replace(/([a-z])([A-Z])/g,"$1 $2") //separate the words but keep the casing
+.replace(/\W+|_+|\s+/g," ")
+.replace(/\s+/g," ")
+.toLowerCase().trim().split(" ")
+.join("-");
+
+  console.log(str);
+
+  return str;
+}
+
+spinalCase("The___Andy___(((++++++____---%%%_Griffith_Show");
